@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>For Syaf, with love. 🌸</title>
+  <meta name="description" content="A personal birthday surprise made by Arif, especially for Syaf." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400&family=Dancing+Script:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       INTRO SCREEN — opens when the page first loads
+       ============================================================ -->
+  <div id="intro-screen" class="intro-screen" role="dialog" aria-modal="true" aria-labelledby="intro-heading">
+
+    <!-- Floating background hearts (decorative, hidden from screen readers) -->
+    <div class="intro-bg-hearts" aria-hidden="true">
+      <span class="bh bh1">♡</span>
+      <span class="bh bh2">♡</span>
+      <span class="bh bh3">♡</span>
+      <span class="bh bh4">♡</span>
+      <span class="bh bh5">♡</span>
+      <span class="bh bh6">♡</span>
+      <span class="bh bh7">♡</span>
+      <span class="bh bh8">✿</span>
+    </div>
+
+    <!-- Decorative corner doodles -->
+    <div class="intro-doodle intro-doodle--tl" aria-hidden="true">
+      <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 10 Q 30 5, 40 20 Q 55 10, 50 30" stroke="#c9747a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="20" cy="35" r="3" fill="#e8a0a5" opacity="0.6"/>
+        <circle cx="50" cy="15" r="2" fill="#c9747a" opacity="0.4"/>
+        <path d="M5 50 Q 20 45 25 60" stroke="#d4956a" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <text x="55" y="45" font-size="16" fill="#c9747a" opacity="0.5">✿</text>
+        <text x="15" y="75" font-size="10" fill="#c9747a" opacity="0.4">♡</text>
+      </svg>
+    </div>
+    <div class="intro-doodle intro-doodle--br" aria-hidden="true">
+      <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M110 110 Q 90 115, 80 100 Q 65 110, 70 90" stroke="#c9747a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="100" cy="85" r="3" fill="#e8a0a5" opacity="0.6"/>
+        <path d="M115 70 Q 100 75 95 60" stroke="#d4956a" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <text x="55" y="100" font-size="16" fill="#c9747a" opacity="0.5">✿</text>
+        <text x="95" y="55" font-size="10" fill="#c9747a" opacity="0.4">♡</text>
+      </svg>
+    </div>
+
+    <div class="intro-content">
+      <!-- Washi tape strip -->
+      <div class="intro-tape" aria-hidden="true"></div>
+
+      <p class="intro-stamp" aria-hidden="true">✉ special delivery ✉</p>
+
+      <h1 id="intro-heading" class="intro-title">For Syaf,<br /><em>with love.</em></h1>
+
+      <p class="intro-subtitle">Something made just for you — open it carefully. 🌸</p>
+
+      <div class="intro-hearts-row" aria-hidden="true">
+        <span>♡</span><span>✿</span><span>♡</span>
+      </div>
+
+      <button
+        id="open-btn"
+        class="btn-open"
+        aria-label="Open your birthday surprise"
+        onclick="openSurprise()"
+      >
+        Open your surprise ✨
+      </button>
+
+      <p class="intro-byline">made by Arif, especially for you 🌷</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN SITE — revealed after intro
+       ============================================================ -->
+  <main id="main-site" class="main-site" aria-label="Birthday surprise for Syaf">
+
+    <!-- ──────────────────────────────────────────────────
+         HERO SECTION
+         ────────────────────────────────────────────────── -->
+    <section id="hero" class="section section--hero" aria-labelledby="hero-heading">
+
+      <div class="hero-deco" aria-hidden="true">
+        <span class="hd hd--star">✦</span>
+        <span class="hd hd--heart">♡</span>
+        <span class="hd hd--flower">✿</span>
+        <span class="hd hd--star2">✦</span>
+        <span class="hd hd--heart2">♡</span>
+      </div>
+
+      <!-- Polaroid cluster, decorative -->
+      <div class="hero-polaroid-cluster" aria-hidden="true">
+        <div class="mini-polaroid mp1">
+          <div class="mini-polaroid__img">✿</div>
+          <span>us ♡</span>
+        </div>
+        <div class="mini-polaroid mp2">
+          <div class="mini-polaroid__img">🌸</div>
+          <span>always</span>
+        </div>
+        <div class="mini-polaroid mp3">
+          <div class="mini-polaroid__img">♡</div>
+          <span>today</span>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <p class="hero-date script-font" aria-label="October 30">30 · 10 · 2026 🎂</p>
+        <h2 id="hero-heading" class="hero-heading">Happy Birthday,<br />My Love ♡</h2>
+        <p class="hero-sub">
+          Today belongs entirely to you — the kindest, softest, most wonderful person I know.
+          I hope this little corner of the internet makes you smile.
+        </p>
+        <!-- Decorative paper strip -->
+        <div class="hero-strip" aria-hidden="true">
+          <span>♡ happy birthday syaf ♡</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ──────────────────────────────────────────────────
+         ENVELOPE + LOVE LETTER SECTION
+         ────────────────────────────────────────────────── -->
+    <section id="letter-section" class="section section--letter" aria-labelledby="letter-heading">
+
+      <div class="section-label" aria-hidden="true">✉ a letter for you</div>
+      <h2 id="letter-heading" class="section-heading">Open your letter, sayang</h2>
+      <p class="section-sub">Click the envelope to reveal a message from the heart.</p>
+
+      <div class="envelope-wrapper">
+        <div
+          id="envelope"
+          class="envelope"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
+          aria-label="Open the love letter"
+          onclick="toggleEnvelope()"
+          onkeydown="handleEnvelopeKey(event)"
+        >
+          <!-- Envelope body -->
+          <div class="envelope__body">
+            <!-- Flap (top triangle) -->
+            <div class="envelope__flap" aria-hidden="true"></div>
+            <!-- Envelope front decoration -->
+            <div class="envelope__front" aria-hidden="true">
+              <div class="env-seal">♡</div>
+              <div class="env-lines">
+                <div class="env-line"></div>
+                <div class="env-line env-line--short"></div>
+              </div>
+              <p class="env-to script-font">To: Syaf 🌸</p>
+              <p class="env-hint">tap to open ↓</p>
+            </div>
+          </div>
+
+          <!-- Letter (hidden inside envelope, slides up on open) -->
+          <div class="letter" id="letter" aria-hidden="true">
+            <div class="letter__inner">
+              <div class="letter__header" aria-hidden="true">
+                <span class="letter-deco">✿ ♡ ✿</span>
+              </div>
+
+              <!-- ✏️ EDITABLE LETTER — change the text below -->
+              <p class="letter__salutation script-font">Dear Syaf,</p>
+
+              <div class="letter__body">
+                <p>
+                  Happy birthday, sayang. I hope today reminds you how special you are and how much happiness
+                  you deserve. Thank you for being part of my life and for all the little moments that mean more
+                  to me than I can always explain.
+                </p>
+                <p>
+                  I hope this new chapter brings you peace, beautiful opportunities, good health, and plenty of
+                  reasons to smile. No matter how busy life gets, I hope you never forget that you deserve to be
+                  loved, appreciated, and celebrated.
+                </p>
+                <p>
+                  Thank you for being you. I'm grateful for the memories we have made, and I hope we get to
+                  create many more together.
+                </p>
+                <p>
+                  Happy birthday, my love. ♡
+                </p>
+              </div>
+              <!-- ✏️ END EDITABLE LETTER -->
+
+              <div class="letter__signature">
+                <p class="script-font">With love,</p>
+                <p class="letter__sig-name script-font">Arif</p>
+                <p class="letter__sig-deco" aria-hidden="true">♡ ✿ ♡</p>
+              </div>
+
+              <div class="letter__stamp" aria-hidden="true">
+                <div class="stamp">🌸</div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.envelope -->
+
+        <p class="envelope-note script-font" aria-hidden="true">sealed with love 🌷</p>
+      </div>
+
+    </section>
+
+    <!-- ──────────────────────────────────────────────────
+         MEMORY GALLERY — POLAROID SCRAPBOOK
+         ────────────────────────────────────────────────── -->
+    <section id="gallery-section" class="section section--gallery" aria-labelledby="gallery-heading">
+
+      <div class="section-label" aria-hidden="true">📷 our memories</div>
+      <h2 id="gallery-heading" class="section-heading">A little scrapbook, just for us</h2>
+      <p class="section-sub">Little snapshots of the moments I hold closest. ♡</p>
+
+      <div class="gallery-grid" id="gallery-grid" role="list" aria-label="Photo gallery">
+
+        <!-- ✏️ POLAROID 1 — replace photo-1.jpg and change the caption -->
+        <div
+          class="polaroid"
+          role="listitem"
+          tabindex="0"
+          aria-label="Photo 1: the day we met"
+          data-index="0"
+          onclick="openLightbox(0)"
+          onkeydown="handlePolaroidKey(event, 0)"
+          style="--rot: -3deg; --delay: 0s"
+        >
+          <div class="polaroid__img-wrap">
+            <img
+              src="photo-1.jpg"
+              alt="A cherished memory — the day we met"
+              class="polaroid__img"
+              onerror="this.parentNode.classList.add('polaroid__img-wrap--placeholder')"
+              loading="lazy"
+            />
+            <div class="polaroid__placeholder" aria-hidden="true">✿</div>
+          </div>
+          <p class="polaroid__caption script-font">the day we met ♡</p>
+        </div>
+
+        <!-- ✏️ POLAROID 2 -->
+        <div
+          class="polaroid"
+          role="listitem"
+          tabindex="0"
+          aria-label="Photo 2: our first adventure"
+          data-index="1"
+          onclick="openLightbox(1)"
+          onkeydown="handlePolaroidKey(event, 1)"
+          style="--rot: 2deg; --delay: 0.1s"
+        >
+          <div class="polaroid__img-wrap">
+            <img
+              src="photo-2.jpg"
+              alt="Our first adventure together"
+              class="polaroid__img"
+              onerror="this.parentNode.classList.add('polaroid__img-wrap--placeholder')"
+              loading="lazy"
+            />
+            <div class="polaroid__placeholder" aria-hidden="true">🌸</div>
+          </div>
+          <p class="polaroid__caption script-font">our first adventure ✈</p>
+        </div>
+
+        <!-- ✏️ POLAROID 3 -->
+        <div
+          class="polaroid"
+          role="listitem"
+          tabindex="0"
+          aria-label="Photo 3: laughing until we cried"
+          data-index="2"
+          onclick="openLightbox(2)"
+          onkeydown="handlePolaroidKey(event, 2)"
+          style="--rot: -2deg; --delay: 0.2s"
+        >
+          <div class="polaroid__img-wrap">
+            <img
+              src="photo-3.jpg"
+              alt="The moment we laughed until we cried"
+              class="polaroid__img"
+              onerror="this.parentNode.classList.add('polaroid__img-wrap--placeholder')"
+              loading="lazy"
+            />
+            <div class="polaroid__placeholder" aria-hidden="true">♡</div>
+          </div>
+          <p class="polaroid__caption script-font">laughing until we cried 😂</p>
+        </div>
+
+        <!-- ✏️ POLAROID 4 -->
+        <div
+          class="polaroid"
+          role="listitem"
+          tabindex="0"
+          aria-label="Photo 4: quiet Sunday mornings"
+          data-index="3"
+          onclick="openLightbox(3)"
+          onkeydown="handlePolaroidKey(event, 3)"
+          style="--rot: 3deg; --delay: 0.3s"
+        >
+          <div class="polaroid__img-wrap">
+            <img
+              src="photo-4.jpg"
+              alt="A quiet Sunday morning together"
+              class="polaroid__img"
+              onerror="this.parentNode.classList.add('polaroid__img-wrap--placeholder')"
+              loading="lazy"
+            />
+            <div class="polaroid__placeholder" aria-hidden="true">☀</div>
+          </div>
+          <p class="polaroid__caption script-font">quiet Sunday mornings ☕</p>
+        </div>
+
+        <!-- ✏️ POLAROID 5 -->
+        <div
+          class="polaroid"
+          role="listitem"
+          tabindex="0"
+          aria-label="Photo 5: you, always beautiful"
+          data-index="4"
+          onclick="openLightbox(4)"
+          onkeydown="handlePolaroidKey(event, 4)"
+          style="--rot: -1.5deg; --delay: 0.4s"
+        >
+          <div class="polaroid__img-wrap">
+            <img
+              src="photo-5.jpg"
+              alt="You, always beautiful"
+              class="polaroid__img"
+              onerror="this.parentNode.classList.add('polaroid__img-wrap--placeholder')"
+              loading="lazy"
+            />
+            <div class="polaroid__placeholder" aria-hidden="true">🌷</div>
+          </div>
+          <p class="polaroid__caption script-font">you, always beautiful 🌷</p>
+        </div>
+
+        <!-- ✏️ POLAROID 6 -->
+        <div
+          class="polaroid"
+          role="listitem"
+          tabindex="0"
+          aria-label="Photo 6: my favourite person"
+          data-index="5"
+          onclick="openLightbox(5)"
+          onkeydown="handlePolaroidKey(event, 5)"
+          style="--rot: 2.5deg; --delay: 0.5s"
+        >
+          <div class="polaroid__img-wrap">
+            <img
+              src="photo-6.jpg"
+              alt="My favourite person in the world"
+              class="polaroid__img"
+              onerror="this.parentNode.classList.add('polaroid__img-wrap--placeholder')"
+              loading="lazy"
+            />
+            <div class="polaroid__placeholder" aria-hidden="true">✦</div>
+          </div>
+          <p class="polaroid__caption script-font">my favourite person ✦</p>
+        </div>
+
+      </div><!-- /.gallery-grid -->
+
+      <!-- Lightbox -->
+      <div
+        id="lightbox"
+        class="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lightbox-caption"
+        hidden
+      >
+        <div class="lightbox__backdrop" onclick="closeLightbox()" aria-label="Close photo viewer"></div>
+        <div class="lightbox__content">
+          <button class="lightbox__close" onclick="closeLightbox()" aria-label="Close photo viewer">✕</button>
+          <button class="lightbox__nav lightbox__nav--prev" id="lb-prev" onclick="lightboxPrev()" aria-label="Previous photo">‹</button>
+          <button class="lightbox__nav lightbox__nav--next" id="lb-next" onclick="lightboxNext()" aria-label="Next photo">›</button>
+          <div class="lightbox__polaroid">
+            <div class="lightbox__img-wrap">
+              <img id="lightbox-img" src="" alt="" class="lightbox__img" />
+              <div class="lightbox__placeholder" aria-hidden="true" id="lightbox-placeholder"></div>
+            </div>
+            <p id="lightbox-caption" class="lightbox__caption script-font"></p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ──────────────────────────────────────────────────
+         FLIP CARDS
+         ────────────────────────────────────────────────── -->
+    <section id="cards-section" class="section section--cards" aria-labelledby="cards-heading">
+
+      <div class="section-label" aria-hidden="true">💌 little notes</div>
+      <h2 id="cards-heading" class="section-heading">Little things, from me to you</h2>
+      <p class="section-sub">Tap each card to find what's hiding inside. ♡</p>
+
+      <div class="flip-cards-row">
+
+        <!-- CARD 1 -->
+        <div
+          class="flip-card"
+          role="button"
+          tabindex="0"
+          aria-pressed="false"
+          aria-label="Flip card: a little thing I love about you"
+          onclick="flipCard(this)"
+          onkeydown="handleCardKey(event, this)"
+        >
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="flip-card__icon" aria-hidden="true">♡</div>
+              <p class="flip-card__prompt script-font">A little thing<br/>I love about you</p>
+              <p class="flip-card__hint" aria-hidden="true">tap to reveal ↩</p>
+            </div>
+            <div class="flip-card__back" aria-hidden="true">
+              <!-- ✏️ Edit the message on the back of card 1 -->
+              <p class="flip-card__message script-font">
+                The way your eyes light up when you talk about something you love. It makes my whole world brighter.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div
+          class="flip-card"
+          role="button"
+          tabindex="0"
+          aria-pressed="false"
+          aria-label="Flip card: a memory I treasure"
+          onclick="flipCard(this)"
+          onkeydown="handleCardKey(event, this)"
+        >
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="flip-card__icon" aria-hidden="true">✿</div>
+              <p class="flip-card__prompt script-font">A memory<br/>I treasure</p>
+              <p class="flip-card__hint" aria-hidden="true">tap to reveal ↩</p>
+            </div>
+            <div class="flip-card__back" aria-hidden="true">
+              <!-- ✏️ Edit the message on the back of card 2 -->
+              <p class="flip-card__message script-font">
+                The first time I realised I was completely, hopelessly happy just being next to you. I wouldn't trade that moment for anything.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div
+          class="flip-card"
+          role="button"
+          tabindex="0"
+          aria-pressed="false"
+          aria-label="Flip card: a wish for your future"
+          onclick="flipCard(this)"
+          onkeydown="handleCardKey(event, this)"
+        >
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="flip-card__icon" aria-hidden="true">✦</div>
+              <p class="flip-card__prompt script-font">A wish<br/>for your future</p>
+              <p class="flip-card__hint" aria-hidden="true">tap to reveal ↩</p>
+            </div>
+            <div class="flip-card__back" aria-hidden="true">
+              <!-- ✏️ Edit the message on the back of card 3 -->
+              <p class="flip-card__message script-font">
+                I wish you a future full of soft mornings, people who see your worth, and every dream you've been brave enough to hold on to.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div
+          class="flip-card"
+          role="button"
+          tabindex="0"
+          aria-pressed="false"
+          aria-label="Flip card: something you should know"
+          onclick="flipCard(this)"
+          onkeydown="handleCardKey(event, this)"
+        >
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="flip-card__icon" aria-hidden="true">🌸</div>
+              <p class="flip-card__prompt script-font">Something<br/>you should know</p>
+              <p class="flip-card__hint" aria-hidden="true">tap to reveal ↩</p>
+            </div>
+            <div class="flip-card__back" aria-hidden="true">
+              <!-- ✏️ Edit the message on the back of card 4 -->
+              <p class="flip-card__message script-font">
+                You are so much more capable and wonderful than you give yourself credit for. Never doubt how extraordinary you are.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.flip-cards-row -->
+    </section>
+
+    <!-- ──────────────────────────────────────────────────
+         PERSONAL MESSAGE SECTION
+         ────────────────────────────────────────────────── -->
+    <section id="wish-section" class="section section--wish" aria-labelledby="wish-heading">
+
+      <div class="wish-paper">
+        <div class="wish-tape wish-tape--tl" aria-hidden="true"></div>
+        <div class="wish-tape wish-tape--tr" aria-hidden="true"></div>
+
+        <div class="wish-annotation wish-annotation--1 script-font" aria-hidden="true">for you ♡</div>
+        <div class="wish-annotation wish-annotation--2 script-font" aria-hidden="true">with every bit of my heart</div>
+
+        <div class="section-label" aria-hidden="true">🌷 a little wish</div>
+        <h2 id="wish-heading" class="section-heading">If I could give you one thing…</h2>
+
+        <!-- ✏️ Edit the wish message below -->
+        <div class="wish-body">
+          <p>
+            I would give you the kind of peace that doesn't waver — a quiet confidence that reminds you,
+            even on the hardest days, that you are exactly where you are meant to be and that you are
+            more than enough.
+          </p>
+          <p>
+            I would give you opportunities that feel made for you, the courage to say yes to them,
+            and enough stillness to actually enjoy each beautiful moment as it comes.
+          </p>
+          <p>
+            I would give you a heart full of certainty — certainty that you are loved,
+            that your feelings matter, and that the people who are lucky enough to know you see something
+            truly special in you.
+          </p>
+          <p class="wish-close script-font">Happy birthday, Syaf. ♡</p>
+        </div>
+        <!-- ✏️ End wish message -->
+
+        <div class="wish-deco" aria-hidden="true">
+          <span>✿</span><span>♡</span><span>✿</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ──────────────────────────────────────────────────
+         CINEMATIC HEART FINALE
+         ────────────────────────────────────────────────── -->
+    <section id="finale-section" class="section section--finale" aria-labelledby="finale-teaser-heading">
+
+      <!-- Teaser prompt -->
+      <div class="finale-teaser" id="finale-teaser">
+        <div class="section-label" aria-hidden="true">✨ one more thing</div>
+        <h2 id="finale-teaser-heading" class="section-heading">There's one last thing, my love…</h2>
+        <p class="section-sub">Are you ready? ♡</p>
+        <button
+          id="finale-btn"
+          class="btn-finale"
+          onclick="triggerFinale()"
+          aria-label="Reveal the final birthday message"
+        >
+          One last thing, my love… ♡
+        </button>
+      </div>
+
+      <!-- Finale reveal -->
+      <div class="finale-reveal" id="finale-reveal" aria-live="polite" aria-hidden="true">
+        <!-- Hearts container (filled by JS) -->
+        <div class="finale-hearts" id="finale-hearts" aria-hidden="true"></div>
+
+        <div class="finale-message">
+          <p class="finale-pre script-font">always and forever —</p>
+          <!-- ✏️ Edit the main finale heading below -->
+          <h2 class="finale-heading">You will always be worth celebrating.</h2>
+          <!-- ✏️ Edit the finale message below -->
+          <p class="finale-sub">
+            On every birthday, and every ordinary Tuesday in between —
+            I hope you feel it: the warmth, the love, the certainty that you matter deeply
+            to the people around you, and most especially, to me.
+          </p>
+          <!-- ✏️ End finale message -->
+          <p class="finale-sign script-font">Happy Birthday, Syaf ♡</p>
+          <p class="finale-from script-font">— Arif</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main><!-- /#main-site -->
+
+  <script src="script.js"></script>
+</body>
+</html>
